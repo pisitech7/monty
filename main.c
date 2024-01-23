@@ -1,12 +1,11 @@
 #include "monty.h"
 #include <stdio.h>
 
-bus_t bus = {NULL, NULL, NULL, 0};
 
 /**
- * main - monty code interpreter
+ * main - Monty code interpreter
  * @argc: number of arguments
- * @argv: monty file location
+ * @argv: Monty file location
  * Return: 0 on success
  */
 int main(int argc, char *argv[])
@@ -15,7 +14,6 @@ int main(int argc, char *argv[])
 	FILE *file;
 	size_t size = 0;
 	ssize_t read_line;
-
 	stack_t *stack = NULL;
 	unsigned int counter = 0;
 
@@ -36,8 +34,8 @@ int main(int argc, char *argv[])
 
 	while ((read_line = getline(&content, &size, file)) != -1)
 	{
-		bus.content = content;
-		counter++;
+	bus.content = content;
+	counter++;
 
 	if (read_line > 0)
 	{
